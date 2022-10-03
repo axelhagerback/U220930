@@ -1,1 +1,19 @@
-{"nameA": "Volvo", "nameB": "BMW", "nameC": "Mercedes", "nameD": "Audi"}
+{
+    "Cars": [
+        {
+            "Brand": "Audi",
+            "Model": "R8",
+            "Year": "2017"
+        },
+        {
+            "Brand": "BMW",
+            "Model": "4",
+            "Year": "2018"
+        },
+        {
+            "Brand": "Mercedes",
+            "Model": "W13",
+            "Year": "2022"
+        }
+    ]
+}

@@ -41,15 +41,24 @@ duck.onload = () => {
     var list = document.createElement('ul');
     carList.appendChild(list);
 
-    console.log(list);
+    cars.Cars.forEach(car => {
+        console.log(car);
+        var listRow = document.createElement('li');
+
+        var carsInfo = JSON.stringify(car); 
+        console.log(carsInfo);
 
 
-    for (var label in cars) {
+        list.appendChild(listRow);
+    });
+
+
+    /*for (var label in cars) {
         console.log(label);
         var listRow = document.createElement('li');
         listRow.innerHTML = (cars[label]);
         list.appendChild(listRow);
-    };
+    };*/
 };
 
 loadCars = () => {
