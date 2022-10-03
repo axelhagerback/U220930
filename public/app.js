@@ -1,16 +1,15 @@
-const anka = new XMLHttpRequest();
-
-anka.open('GET', 'structure.json');
-anka.send();
+const structure = new XMLHttpRequest();
+structure.open('GET', 'structure.json');
+structure.send();
 
 
 const duck = new XMLHttpRequest();
 duck.open('GET', 'cars.json');
 duck.send();
 
-anka.onload = () => {
+structure.onload = () => {
 
-const keys = JSON.parse(anka.responseText);
+const keys = JSON.parse(structure.responseText);
 
 for (var key in keys) {
     console.log(key);
@@ -45,20 +44,12 @@ duck.onload = () => {
         console.log(car);
         var listRow = document.createElement('li');
 
-        var carsInfo = JSON.stringify(car); 
-        console.log(carsInfo);
-
+        listRow.innerHTML = (`${car.Brand} || ${car.Model} || ${car.Year}`)
 
         list.appendChild(listRow);
     });
 
 
-    /*for (var label in cars) {
-        console.log(label);
-        var listRow = document.createElement('li');
-        listRow.innerHTML = (cars[label]);
-        list.appendChild(listRow);
-    };*/
 };
 
 loadCars = () => {
